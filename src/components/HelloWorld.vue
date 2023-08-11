@@ -1,24 +1,23 @@
 <template>
-  <h1 class="underline text-[30px] pb-10">CSS/Class binding</h1>
+  <h1 class="underline text-[30px] pb-10">Props in Vue</h1>
 
-  <h3 :class="adjustStyle" class="pb-10">Hello world</h3>
-  <button class="bg-blue-500 rounded-lg p-2" v-on:click="textBg = !textBg">
-    Apply color
-  </button>
+  <Student name="Godsent" />
+  <Teacher :name="name" />
 </template>
 
 <script>
+import Student from "./Student.vue";
+import Teacher from "./Teacher.vue";
 export default {
   name: "Home",
   data() {
     return {
-      textBg: false,
+      name: "Bruce",
     };
   },
-  computed: {
-    adjustStyle() {
-      return { green: this.textBg, textColor: true, other: true };
-    },
+  components: {
+    Student,
+    Teacher,
   },
 };
 </script>
