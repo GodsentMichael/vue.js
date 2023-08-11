@@ -1,36 +1,27 @@
 <template>
-  <h1 class="underline text-[30px] pb-10">Props in Vue</h1>
+  <h1 class="underline text-[30px] pb-10">Username: {{ name }}</h1>
 
-  <Student name="Godsent" />
-  <Teacher :name="name" />
+  <User :getUser="getUserName" />
 </template>
 
 <script>
-import Student from "./Student.vue";
-import Teacher from "./Teacher.vue";
+import User from "./User.vue";
 export default {
   name: "Home",
   data() {
     return {
-      name: "Bruce",
+      name: "",
     };
   },
   components: {
-    Student,
-    Teacher,
+    User,
+  },
+  methods: {
+    getUserName(name) {
+      this.name = name;
+    },
   },
 };
 </script>
 
-<style scoped>
-.green {
-  background-color: green;
-  width: 200px;
-}
-.textColor {
-  color: red;
-}
-.other {
-  height: 60px;
-}
-</style>
+<style scoped></style>
