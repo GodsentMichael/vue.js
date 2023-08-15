@@ -5,3 +5,5 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+- Watchers: These are the secret observers of your property, they can perfom significant operations when certain conditions you state take effect. They are like functions you are simply using to make your code do something when the state changes/while something else is happening.
